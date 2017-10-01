@@ -1,5 +1,4 @@
 
-/*
 var json = {
     "A":{
         "title": "This is A",
@@ -131,9 +130,9 @@ var json = {
         }
     }
 }
-*/
 
 
+/*
 var json = {
   "houses": [
     {
@@ -428,10 +427,11 @@ var json = {
 
   ]
 }
-
+*/
 
 var camera, scene, renderer
-var cameraDistance = 1000
+var cameraDistance = 700
+var layout_Radius = 2000
 var cameraPositionQueue = []
 
 var objects = []
@@ -545,17 +545,17 @@ function createDOM(
 
         if (JsonData[key] instanceof Object){
 
-            newNode.id = key + "-menu"
+            newNode.id = parentNode.id + "-" + key
             newNode.className = "menu"
+            //newNode.textContent = key
             createDOM(newNode, JsonData[key])
 
             //create a button portal
-            var btn = document.createElement("BUTTON")
+            var btn = document.createElement("div")
             btn.className = "myButton"
+            btn.id = "btn-" + parentNode.id + "-" + key
             btn.textContent = key
             parentNode.appendChild(btn)
-
-
 
         }
         else {
@@ -574,7 +574,7 @@ function createDOM(
 
 function getPosition( depth, index, nodeTotal, centerPosition ) {
 
-    var r = 1000 / (depth + 1) //radius depend on depth
+    var r = layout_Radius / (depth + 1) //radius depend on depth
 
     //root start from [0,0,0]
     if (depth == 0) {
@@ -582,79 +582,82 @@ function getPosition( depth, index, nodeTotal, centerPosition ) {
         return ( [0, 0, 0] )
 
     }
-    if (nodeTotal == 0) {
-
-        return([
-
-            centerPosition[0],
-            centerPosition[1],
-            centerPosition[2] - (depth + 1) * 1000
-
-        ])
-
-    }
 
     return([
 
-        centerPosition[0] + r * Math.sin(Math.radians(index * 360 / nodeTotal)),  // x
-        centerPosition[1] + r * Math.cos(Math.radians(index * 360 / nodeTotal)),  // y
-        centerPosition[2] - (depth + 1) * 200//z
+        centerPosition[0] + r * Math.cos(Math.radians(index * 360 / nodeTotal)),  // x
+        centerPosition[1] + r * Math.sin(Math.radians(index * 360 / nodeTotal)),  // y
+        centerPosition[2] - (depth + 1) * cameraDistance//z
 
     ])
 
 }
 
+//create CSS objects recursively, the content is based on currentNode,
+//the geo-location based on the parent node's location, current depth and index in the network
 function createCSSobjs(
 
     currentNode,
-    parentNode,
     parentNode_position = [0, 0, 0],
     nodeDepth = 0,
     nodeIndex = 0
 
 ){
 
-    console.log("currentNode: ", currentNode);
-    console.log("depth: ", nodeDepth);
-    console.log("index: ", nodeIndex);
+    //Is the currentNode an entry node? i.e. has sub-objects?
 
-    var siblings = parentNode.childNodes
-    console.log("siblings: ", siblings);
-    var nodeTotal = 0;
-    for ( var i = 0; i < parentNode.childElementCount; i++ ) {
+    if ( currentNode.className == "menu" ) {
 
-        if ( siblings[ i ].id && siblings[ i ].id.indexOf("menu") != -1 ) {
+        console.log("currentNode: ", currentNode);
+        console.log("depth: ", nodeDepth);
+        console.log("index: ", nodeIndex);
 
-            nodeTotal++
+        //first collect the number of siblings that are also menu entry
+        //i.e. this will help determine the currentNode's CSS object's geo-location
+        var siblings = currentNode.parentNode.childNodes
+        //console.log("siblings: ", siblings);
+        var nodeTotal = 0;
+        for ( var i = 0; i < siblings.length; i++ ) {
+
+            if ( siblings[ i ].className == "menu"  ) {
+
+                //console.log("siblings_i: ", siblings[ i ]);
+                nodeTotal++
+
+            }
 
         }
+        console.log("nodeTotal: ", nodeTotal);
+
+
+        //create CSS object
+        var object = new THREE.CSS3DObject(currentNode)
+
+        //set position
+        var position = getPosition( nodeDepth, nodeIndex, nodeTotal, parentNode_position )
+        object.position.x = position[0]
+        object.position.y = position[1]
+        object.position.z = position[2]
+        console.log("position: ", position);
+
+        //push to the queue
+        objects.push(object)
+
+        //add to threejs scene
+        scene.add( object )
 
     }
-    console.log("nodeTotal: ", nodeTotal);
 
-    var object = new THREE.CSS3DObject(currentNode)
-
-    //update position
-    var position = getPosition( nodeDepth, nodeIndex, nodeTotal, parentNode_position )
-    object.position.x = position[0]
-    object.position.y = position[1]
-    object.position.z = position[2]
-    console.log("position: ", position);
-    objects.push(object)
-    scene.add( object )
-    //
-
-
+    //recursively create CSS objects for all the children of currentNode that has a complex entry (entry towards more objects)
     var children = currentNode.childNodes
     var k = 0
-    for ( var i = 0; i < currentNode.childElementCount; i++ ) {
+    for ( var i = 0; i < children.length; i++ ) {
 
-        //console.log( children[ i ] );
+        if ( children[ i ].className == "menu" ) {
 
-        if ( children[ i ].id.indexOf("menu") != -1 ) {
-
-            console.log(children[ i ].id);
-            createCSSobjs( children[ i ], currentNode, position, nodeDepth+1, k)
+            console.log( "child: ", children[ i ]);
+            console.log( "position: ", parentNode_position);
+            createCSSobjs( children[ i ], parentNode_position, nodeDepth+1, k)
             k++
 
         }
@@ -665,7 +668,7 @@ function createCSSobjs(
 
 function cameraRollback() {
 
-    if ( cameraPositionQueue.length ) {
+    if ( cameraPositionQueue.length > 1 ) {
 
         var currentCameraPosition = cameraPositionQueue.pop()
         console.log(currentCameraPosition)
@@ -678,23 +681,21 @@ function cameraRollback() {
 function createEvents() {
 
     var btns = document.getElementsByClassName("myButton");
-    console.log("myButtons: ", btns);
+    //console.log("myButtons: ", btns);
+    //console.log("objects: ", objects);
 
-    console.log("object CLASS:", objects[1].element.className);
+    for ( var btn of btns) {
 
-    for ( var i = 0; i < btns.length; i++ ) {
+        //console.log("btn: ", btn);
+        btn.addEventListener('click', function() {
 
-        btns[i].addEventListener('click', function() {
+            //console.log("button_i: ", btn)
+            var targetId = this.id.substring(4)
+            //console.log("targetId: ", targetId);
 
-            console.log(this.textContent);
-            console.log(camera.position);
-            console.log("objects: ", objects);
+            for ( var object of objects ){
 
-            var targetId = this.textContent + "-menu"
-            for ( var j = 0; j < objects.length; j++ ){
-
-                    var object = objects[ j ]
-                    if (object.element.id == targetId) {
+                    if ( object.element.id == targetId ) {
 
                         var tmp = new THREE.Object3D();
                         tmp.position.x = object.position.x
@@ -718,7 +719,7 @@ function createEvents() {
 
     //right click to go back to previous camera position
     document.addEventListener("mousedown", function(e) {
-        console.log(e); // you can inspect the click event
+        //console.log(e); // you can inspect the click event
 
         if (e.which === 3) { // right click = 3, left click = 1
 
@@ -747,11 +748,11 @@ function createCvElements(){
 
     //tmp = document.createElement("div")
     //tmp.className = "root"
-    var container = document.getElementById("container")
-    createDOM(container)
+    var container = document.getElementById( "container" )
+    createDOM( container )
 
     //console.log(container.childNodes[2]);
-    createCSSobjs(container.childNodes[2], container )
+    createCSSobjs( container )
 
     //adding the event listeners
     createEvents()
