@@ -1,140 +1,5 @@
-
 var json = {
-    "A":{
-        "title": "This is A",
-        "AA":{
-            "content": "this is AA",
-            "AAA":{
-                "Aa":"Aaaa",
-                "Ab":"Abbb",
-                "Ac":"Accc"
-            },
-            "AAB":{
-                "Aa":"Aaaa",
-                "Ab":"Abbb",
-                "Ac":"Accc"
-            },
-            "AAC":{
-                "Aa":"Aaaa",
-                "Ab":"Abbb",
-                "Ac":"Accc"
-            }
-        },
-        "AB":{
-            "content": "this is AB",
-            "ABA":{
-                "Ba":"Baaa",
-                "Bb":"Bbbb",
-                "Bc":"Bccc"
-            },
-            "ABB":{
-                "Ba":"Baaa",
-                "Bb":"Bbbb",
-                "Bc":"Bccc"
-            },
-            "ABC":{
-                "Ba":"Baaa",
-                "Bb":"Bbbb",
-                "Bc":"Bccc"
-            }
-        },
-        "AC":{
-            "content": "this is AC",
-            "ACA":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACB":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACC":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            }
-        },
-        "AD":{
-            "content": "this is AC",
-            "ACA":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACB":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACC":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            }
-        },
-        "AE":{
-            "content": "this is AC",
-            "ACA":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACB":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACC":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            }
-        },
-        "AF":{
-            "content": "this is AC",
-            "ACA":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACB":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACC":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            }
-        },
-        "AG":{
-            "content": "this is AC",
-            "ACA":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACB":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            },
-            "ACC":{
-                "Ca":"Caaa",
-                "Cb":"Cbbb",
-                "Cc":"Cccc"
-            }
-        }
-    }
-}
-
-
-/*
-var json = {
-  "houses": [
+  "Game of Throne Houses": [
     {
       "name": "Starks",
       "wikiSuffix": "House_Stark",
@@ -156,36 +21,6 @@ var json = {
           "description": "Son of Eddard and Catelyn Stark - Direwolf: Grey Wind",
           "imageSuffix": "robb-stark",
           "wikiSuffix": "Robb_Stark"
-        },
-        {
-          "name": "Sansa Stark",
-          "description": "Daughter of Eddard and Catelyn Stark - Direwolf: Lady",
-          "imageSuffix": "sansa-stark",
-          "wikiSuffix": "Sansa_Stark"
-        },
-        {
-          "name": "Arya Stark",
-          "description": "Daughter of Eddard and Catelyn Stark - Direwolf: Nymeria",
-          "imageSuffix": "arya-stark",
-          "wikiSuffix": "Arya_Stark"
-        },
-        {
-          "name": "Brandon \"Bran\" Stark",
-          "description": "Son of Eddard and Catelyn Stark - Direwolf: Summer",
-          "imageSuffix": "brandon-stark",
-          "wikiSuffix": "Brandon_Stark"
-        },
-        {
-          "name": "Rickon Stark",
-          "description": "Son of Eddard and Catelyn Stark - Direwolf: Shaggydog",
-          "imageSuffix": "rickon-stark",
-          "wikiSuffix": "Rickon_Stark"
-        },
-        {
-          "name": "Jon Snow",
-          "description": "Bastard son of Eddard Stark - Steweard in the Night's Watch - Direwolf: Ghost",
-          "imageSuffix": "jon-snow",
-          "wikiSuffix": "Jon_Snow"
         }
       ]
     },
@@ -222,7 +57,6 @@ var json = {
         }
       ]
     },
-
 
     {
       "name": "Baratheons",
@@ -267,9 +101,6 @@ var json = {
       ]
     },
 
-
-
-
     {
       "name": "Targaryens",
       "wikiSuffix": "House_Targaryen",
@@ -288,8 +119,6 @@ var json = {
         }
       ]
     },
-
-
 
     {
       "name": "Greyjoys",
@@ -315,134 +144,30 @@ var json = {
         }
 
       ]
-    },
-
-    {
-      "name": "Tyrells",
-      "wikiSuffix": "House_Tyrell",
-      "people": [
-        {
-          "name": "Margaery (Tyrell) Baratheon",
-          "description": "Wife of Renly Baratheon - Sister of Loras Tyrell - Granddaughter of Olenna Tyrell",
-          "imageSuffix": "margaery-tyrell",
-          "wikiSuffix": "Margaery_Tyrell"
-        },
-        {
-          "name": "Loras Tyrell",
-          "description": "Heir to Highgarden - Commander of the Kings Gaurd - Brother of Margaery Baratheon",
-          "imageSuffix": "loras-tyrell",
-          "wikiSuffix": "Loras_Tyrell"
-        }
-
-      ]
-    },
-
-    {
-      "name": "Tullys",
-      "wikiSuffix": "House_Tully",
-      "people": [
-        {
-          "name": "Catelyn (Tully) Stark",
-          "description": "Married to Eddard Stark - Daughter of Hoster Tully",
-          "imageSuffix": "catelyn-tully",
-          "wikiSuffix": "Catelyn_Tully"
-        },
-        {
-          "name": "Lysa (Tully) Arryn",
-          "description": "Widow of Jon Arryn - Daughter of Hoster Tully",
-          "imageSuffix": "lysa-tully",
-          "wikiSuffix": "Lysa_Tully"
-        },
-        {
-          "name": "Edmure Tully",
-          "description": "Heir to Riverrun - Son of Hoster Tully",
-          "imageSuffix": "edmure-tully",
-          "wikiSuffix": "Edmure_Tully"
-        },
-        {
-          "name": "Brynden Tully",
-          "description": "Lord of Riverrun - Head of House Tully - Brother of Hoster Tully",
-          "imageSuffix": "brynden-tully",
-          "wikiSuffix": "Brynden_Tully"
-        }
-
-      ]
-    },
-
-    {
-      "name": "Redwyne",
-      "wikiSuffix": "House_Redwyne",
-      "people": [
-        {
-          "name": "Olenna (Redwyne) Tyrell",
-          "description": "Matriarch of House Tyrell - Queen of Thorns",
-          "imageSuffix": "olenna-tyrell",
-          "wikiSuffix": "Olenna_Tyrell"
-        }
-
-      ]
-    },
-
-    {
-      "name": "Freys",
-      "wikiSuffix": "House_Freys",
-      "people": [
-        {
-          "name": "Walder Frey",
-          "description": "Lord of the Crossing - Head of House Frey",
-          "imageSuffix": "walder-frey",
-          "wikiSuffix": "Walder_Frey"
-        }
-
-      ]
-    },
-
-    {
-      "name": "Arryns",
-      "wikiSuffix": "House_Arryns",
-      "people": [
-        {
-          "name": "Jon Arryn",
-          "description": "Lord of the Eyrie - Head of House Arryn - Warden of the East - Defender of the Vale",
-          "imageSuffix": "jon-arryn",
-          "wikiSuffix": "Jon_Arryn"
-        }
-
-      ]
-    },
-
-    {
-      "name": "Dothrakis",
-      "wikiSuffix": "House_Dothrakis",
-      "people": [
-        {
-          "name": "Khal Drogo",
-          "description": "Leader of the Dothraki people - Dothraki Warlord - Married to Daenerys Targaryen",
-          "imageSuffix": "khal-drogo",
-          "wikiSuffix": "Drogo"
-        }
-
-      ]
     }
-
   ]
 }
-*/
+
 
 var camera, scene, renderer
-var cameraDistance = 700
-var layout_Radius = 2000
-var cameraPositionQueue = []
+var cameraDistance = 2500
+var layout_Radius = 1500
+var focusQueue = []
 
 var objects = []
-    targets = []
-    locations = []
+    targets_focus = []
+    targets_away = []
+
+    objects_depth = []
+    objects_index = []
+    objects_siblings = []
 
 var sceneWebgl, rendererWebgl;
 
 window.onload = function(){
-    setup();
-    animate();
+    createCvElements()
+    //setup();
+    //animate();
 }
 
 
@@ -450,7 +175,7 @@ function setup() {
 
     camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
 	camera.position.z = cameraDistance;
-    cameraPositionQueue.push(camera)
+    //cameraPositionQueue.push(camera)
 	scene = new THREE.Scene();
 
     //vanishPt = new THREE.Vector3(0,0,-100);
@@ -481,24 +206,43 @@ function render() {
     //cameraWander();
 }
 
-function transform(targets, duration){
+function transform(targetId, cameraTarget, duration){
 
     TWEEN.removeAll();
+
+    new TWEEN.Tween( camera.position )
+        .to({ x: cameraTarget.x, y: cameraTarget.y, z: cameraTarget.z }, duration )
+        .easing( TWEEN.Easing.Exponential.InOut )
+        .start();
+
     //move camera to starting location
     for ( i = 0; i < objects.length; i++ ) {
 
+        var target = [0,0,0]
         var object = objects[i]
-        var target = targets[i]
+        var cardName = object.element.classList[0]
 
+
+        //console.log("className: ", cardName );
+        //console.log("targetId: ", targetId );
+        if ( cardName == targetId ) {
+
+            //console.log(targets_focus[ cardName ]);
+            target = targets_focus[ cardName ]
+
+        }
+        else {
+
+            //console.log("Away: ", targets_away);
+            //console.log(targets_away[ cardName ]);
+            target = targets_away[ cardName ]
+
+        }
+
+        console.log("target!!!!!:", target);
         new TWEEN.Tween( object.position )
-            .to({ x: target.position.x, y: target.position.y, z: target.position.z }, duration )
+            .to({ x: target[0], y: target[1], z: target[2] }, duration )
             .easing( TWEEN.Easing.Exponential.InOut )
-            .onUpdate( function(){
-
-                //camera.position.x = objects[0].position.x
-                //camera.position.y = objects[0].position.y
-
-            } )
             .start();
 
     }
@@ -513,16 +257,12 @@ function transform(targets, duration){
 function moveCamera( target, duration ) {
 
     TWEEN.removeAll();
+    console.log("camera moving!!!");
+    console.log("target: ", target);
 
     new TWEEN.Tween( camera.position )
-        .to({ x: target.position.x, y: target.position.y, z: target.position.z }, duration )
+        .to({ x: target.x, y: target.y, z: target.z }, duration )
         .easing( TWEEN.Easing.Exponential.InOut )
-        .onUpdate( function(){
-
-            //camera.position.x = objects[0].position.x
-            //camera.position.y = objects[0].position.y
-
-        } )
         .start();
 
 }
@@ -531,187 +271,286 @@ Math.radians = function(degrees) {
   return degrees * Math.PI / 180;
 };
 
+
+//for current json data, create a DOM elemnt given parent node
+/**
 function createDOM(
 
     parentNode,
     JsonData = json,  //default
+    depth = 0 //defult
 
-){
+) {
 
-    for (var key in JsonData){
+    var newContent = document.createElement("div")
+    newContent.className = parentNode.className
 
-        //console.log(key);
+    //if current dataset is array then create a serials items from it
+    for (var key in JsonData) {
+
+        console.log("key: ", key);
         var newNode = document.createElement("div")
 
-        if (JsonData[key] instanceof Object){
+        //console.log(key);
+        if ( JsonData[key] instanceof Array ) {
 
-            newNode.id = parentNode.id + "-" + key
-            newNode.className = "menu"
-            //newNode.textContent = key
-            createDOM(newNode, JsonData[key])
+            newNode.className = parentNode.className
+            createDOM(newNode, JsonData[key], depth++ )
 
-            //create a button portal
-            var btn = document.createElement("div")
-            btn.className = "myButton"
-            btn.id = "btn-" + parentNode.id + "-" + key
-            btn.textContent = key
-            parentNode.appendChild(btn)
+        } else {
+
+            if ( JsonData[key] instanceof Object ) {
+
+                if ( depth == 0 ) {
+
+                    console.log("key: ", key);
+                    console.log("data: ", JsonData[key]);
+                    var newPortal = document.createElement("div")
+
+                    newPortal.className = "portal"
+                    newPortal.id = parentNode.className + "-" + key
+                    newPortal.textContent = JsonData[ key ][ "name" ]
+
+                    newContent.appendChild(newPortal)
+
+                }
+
+
+                newNode.className = parentNode.className + "-" + key
+
+                createDOM(newNode, JsonData[key], depth++ )
+
+            } else {
+
+                newNode.className = key
+                newNode.textContent = JsonData[ key ]
+
+            }
 
         }
-        else {
 
-            //newNode.className = key
-            newNode.className = "panel"
-            newNode.textContent = JsonData[key]
+        newContent.appendChild(newNode)
+
+    }
+
+    //objects_depth[ newCard.className ]
+
+    document.getElementById("container").appendChild(newContent)
+    //create CSS object for current card
+    //console.log("newCard: ", newCard);
+    //var object = new THREE.CSS3DObject(newCard)
+    //objects.push(object)
+
+}
+*/
+
+function menu_total( JsonData ) {
+
+    var total = 0
+
+    for (var key in JsonData) {
+
+        if ( JsonData[ key ] instanceof Object ) {
+
+            total++
 
         }
 
-        parentNode.appendChild(newNode)
+    }
+
+    return total
+
+}
+
+function createDOM() {
+
+    var container = document.getElementById( "container" )
+
+    //var menu_count = menu_total( json[] )
+    var JsonData = json["Game of Throne Houses"]
+
+    //the 1st level content container
+    var newContent = document.createElement( "div" )
+    newContent.className = "content-container"
+    newContent.textContent = "Game of Thrones Houses"
+    container.appendChild( newContent )
+
+    //iterate through each 1st level entries, i.e. houses
+    for ( var key_house in JsonData ) {
+
+        var JsonData_house = JsonData[ key_house ]
+        if ( JsonData_house instanceof Object ) {
+
+            //for each house create a navigation portal
+            //assign the id as house name to point to the next level people containers
+            var newPortal = document.createElement( "div" )
+            newPortal.className = "portal"
+            newPortal.id = JsonData_house[ "name" ]
+            newPortal.textContent = JsonData_house[ "name" ]
+            container.appendChild( newPortal )
+
+            ////extract people in current house
+            var JsonData_people = JsonData_house["people"]
+            console.log( "people: ", JsonData_people )
+
+            //iterate through people
+            for ( var key_people in JsonData_people ) {
+
+                //for each person in current house create a container card
+                //that has multiple iterms i.e. name, discription, ...
+                var container_people = document.createElement( "div" )
+                container_people.className = JsonData_house[ "name" ]
+
+                var JsonData_person = JsonData_people[ key_people ]
+                for ( var key_person in JsonData_person ) {
+
+                    //on person card create items
+                    var newNode = document.createElement( "div" )
+                    newNode.className = key_person
+                    newNode.textContent = JsonData_person[ key_person ]
+                    container_people.appendChild( newNode )
+
+                }
+
+                container.appendChild( container_people )
+
+            }
+
+            ////
+
+        }
 
     }
 
 }
 
-function getPosition( depth, index, nodeTotal, centerPosition ) {
+
+function getPosition_focus( depth, index, nodeTotal, centerPosition ) {
 
     var r = layout_Radius / (depth + 1) //radius depend on depth
-
-    //root start from [0,0,0]
-    if (depth == 0) {
-
-        return ( [0, 0, 0] )
-
-    }
 
     return([
 
         centerPosition[0] + r * Math.cos(Math.radians(index * 360 / nodeTotal)),  // x
         centerPosition[1] + r * Math.sin(Math.radians(index * 360 / nodeTotal)),  // y
-        centerPosition[2] - (depth + 1) * cameraDistance//z
+        centerPosition[2] - (depth + 1) * cameraDistance / 10//z
 
     ])
 
 }
 
+function getPosition_away() {
+    /*
+    return(
+         new THREE.Vector3(
+             (Math.random() * 10000 + 10000) * (Math.random() > 0.5 ? 1: -1),
+             (Math.random() * 10000 + 10000) * (Math.random() > 0.5 ? 1: -1),
+             Math.random() * 5000 - 5000
+         )
+    )
+    */
+    return(
+        [
+            -200 + Math.random() * 500 - 250,
+            Math.random() * 500 - 250,
+            Math.random() * 100 - 50
+        ]
+    )
+}
+
 //create CSS objects recursively, the content is based on currentNode,
 //the geo-location based on the parent node's location, current depth and index in the network
-function createCSSobjs(
+function config_CSSobjs() {
 
-    currentNode,
-    parentNode_position = [0, 0, 0],
-    nodeDepth = 0,
-    nodeIndex = 0
+    //calculate the index, depth and number of siblings for each object
+    var depth_count = []
+    for ( var i = 0; i < objects_depth.length; i++ ) {
 
-){
+        var cardName = objects[i].element.classList[0]
+        var depth = objects_depth[ cardName ]
 
-    //Is the currentNode an entry node? i.e. has sub-objects?
+        if ( depth_count[ depth ] ) {
 
-    if ( currentNode.className == "menu" ) {
+            objects_index[ i ] = depth_count[ depth ]
 
-        console.log("currentNode: ", currentNode);
-        console.log("depth: ", nodeDepth);
-        console.log("index: ", nodeIndex);
+        } else {
 
-        //first collect the number of siblings that are also menu entry
-        //i.e. this will help determine the currentNode's CSS object's geo-location
-        var siblings = currentNode.parentNode.childNodes
-        //console.log("siblings: ", siblings);
-        var nodeTotal = 0;
-        for ( var i = 0; i < siblings.length; i++ ) {
-
-            if ( siblings[ i ].className == "menu"  ) {
-
-                //console.log("siblings_i: ", siblings[ i ]);
-                nodeTotal++
-
-            }
+            depth_count[ depth ] = 0
+            objects_index[ i ] = depth_count[ depth ]
 
         }
-        console.log("nodeTotal: ", nodeTotal);
 
+        depth_count[ depth ]++
 
-        //create CSS object
-        var object = new THREE.CSS3DObject(currentNode)
+    }
 
-        //set position
-        var position = getPosition( nodeDepth, nodeIndex, nodeTotal, parentNode_position )
-        object.position.x = position[0]
-        object.position.y = position[1]
-        object.position.z = position[2]
-        console.log("position: ", position);
+    var view_position = [cameraDistance, 0, 0]
 
-        //push to the queue
-        objects.push(object)
+    for (var i = 0; i < objects_depth.length; i++ ) {
+
+        objects_siblings[ i ] = depth_count[ objects_depth[i] ]
+
+        var object = objects[ i ]
+        //console.log("object: ", object.element);
+        //console.log("classLsit: ", object.element.classList[0]);
+        var cardName = object.element.classList[0]
+        console.log(cardName)
+        //set target focus position
+        targets_focus[ cardName ] = getPosition_focus( objects_depth[ i ], objects_index[ i ], objects_siblings[ i ], view_position )
+
+        //set target away position
+        targets_away[ cardName ] = getPosition_away()
+
+        //console.log("position_focus: ", targets_focus[ i ]);
+        //console.log("position_way: ", targets_away[ i ]);
+
 
         //add to threejs scene
-        scene.add( object )
+        objects[ i ].position.x = targets_away[ cardName ][0]
+        objects[ i ].position.y = targets_away[ cardName ][1]
+        objects[ i ].position.z = targets_away[ cardName ][2]
+        scene.add( objects[ i ] )
 
     }
+    //console.log("focus: ", targets_focus);
+    /**
 
-    //recursively create CSS objects for all the children of currentNode that has a complex entry (entry towards more objects)
-    var children = currentNode.childNodes
-    var k = 0
-    for ( var i = 0; i < children.length; i++ ) {
-
-        if ( children[ i ].className == "menu" ) {
-
-            console.log( "child: ", children[ i ]);
-            console.log( "position: ", parentNode_position);
-            createCSSobjs( children[ i ], parentNode_position, nodeDepth+1, k)
-            k++
-
-        }
-
-    }
-
+    */
 }
 
 function cameraRollback() {
 
-    if ( cameraPositionQueue.length > 1 ) {
-
-        var currentCameraPosition = cameraPositionQueue.pop()
-        console.log(currentCameraPosition)
-        moveCamera( currentCameraPosition, 1000)
-
-    }
+    var tmp = new THREE.Vector3(0, 0, cameraDistance)
+    moveCamera( tmp, 1000 )
 
 }
 
 function createEvents() {
 
-    var btns = document.getElementsByClassName("myButton");
+
+    //setup the default camera focus
+    //var tmp = new THREE.Vector3(300, 0, cameraDistance)
+    //focusQueue.push(tmp)
+
+    var menus = document.getElementsByClassName("subMenu");
     //console.log("myButtons: ", btns);
     //console.log("objects: ", objects);
 
-    for ( var btn of btns) {
+    for ( var menu of menus ) {
 
-        //console.log("btn: ", btn);
-        btn.addEventListener('click', function() {
+        //console.log("menu: ", menu);
+        menu.addEventListener('click', function() {
 
-            //console.log("button_i: ", btn)
-            var targetId = this.id.substring(4)
-            //console.log("targetId: ", targetId);
+            console.log("clicked!!!!")
+            //console.log("menu: ", menu )
+            var targetId = this.id
+            console.log("targetId: ", targetId);
 
-            for ( var object of objects ){
 
-                    if ( object.element.id == targetId ) {
+            //focusQueue.push(tmp)
+            var tmp = new THREE.Vector3( cameraDistance, 0, cameraDistance )
+            transform( targetId, tmp, 1000 )
 
-                        var tmp = new THREE.Object3D();
-                        tmp.position.x = object.position.x
-                        tmp.position.y = object.position.y
-                        tmp.position.z = object.position.z + cameraDistance
-                        //update lastCameraPosition
-                        var currentCameraPosition = new THREE.Object3D()
-                        currentCameraPosition.position.x = camera.position.x
-                        currentCameraPosition.position.y = camera.position.y
-                        currentCameraPosition.position.z = camera.position.z
-                        cameraPositionQueue.push(currentCameraPosition)
-                        moveCamera( tmp, 1000)
-
-                    }
-
-            }
 
         }, false);
 
@@ -724,7 +563,9 @@ function createEvents() {
         if (e.which === 3) { // right click = 3, left click = 1
 
             //console.log("right click");
-            cameraRollback()
+            //cameraRollback()
+            var tmp = new THREE.Vector3(300, 0, cameraDistance)
+            moveCamera( tmp, 1000 )
 
         }
     });
@@ -748,14 +589,14 @@ function createCvElements(){
 
     //tmp = document.createElement("div")
     //tmp.className = "root"
-    var container = document.getElementById( "container" )
-    createDOM( container )
-
-    //console.log(container.childNodes[2]);
-    createCSSobjs( container )
+    //var container = document.getElementById( "container" )
+    createDOM( )
+    //console.log("objects: ", objects);
+    //console.log("depth: ", objects_depth);
+    //config_CSSobjs()
 
     //adding the event listeners
-    createEvents()
+    //createEvents()
 
 
 
